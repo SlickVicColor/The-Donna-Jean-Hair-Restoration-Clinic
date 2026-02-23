@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Donna Jean Clinic - Tri-Fold Brochure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        donnaRust: '#A85F3F',
+                        deepTeal: '#184058',
+                        champagneGold: '#C5A059',
+                        warmClay: '#E0C7B3',
+                        softCream: '#F8F5F0',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none; }
+            body { background: white; padding: 0; }
+            .brochure-spread { box-shadow: none; margin-bottom: 0; page-break-after: always; }
+        }
+        .linen-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/linen-paper.png");
+        }
+        .brochure-panel {
+            width: 33.333%;
+            height: 100%;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .sanctuary-gradient {
+            background: linear-gradient(to top, rgba(248, 245, 240, 1) 0%, rgba(248, 245, 240, 0.4) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-200 py-12 px-4 flex flex-col items-center gap-16 font-sans">
+
+    <div class="no-print text-center max-w-2xl">
+        <h1 class="font-serif text-4xl text-deepTeal mb-4 font-bold italic">Clinical Outreach Tri-Fold</h1>
+        <p class="text-sm text-deepTeal/60 uppercase tracking-[0.2em] mb-8">Ready for Professional Print on 8.5" x 11" Matte Stock</p>
+        <button onclick="window.print()" class="bg-deepTeal text-white px-10 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-donnaRust transition-all shadow-xl">
+            Print Design Preview
+        </button>
+    </div>
+
+    <!-- SPREAD 1: THE OUTSIDE (Back Cover | Inner Flap | Front Cover) -->
+    <div class="w-[1056px] h-[816px] bg-white flex shadow-2xl overflow-hidden brochure-spread relative rounded-sm">
+        
+        <!-- PANEL 6: BACK COVER (Contact & Credentials) -->
+        <div class="brochure-panel bg-deepTeal text-white linen-texture">
+            <div class="flex-grow flex flex-col items-center text-center">
+                <div class="w-20 h-20 rounded-full border border-white/20 flex items-center justify-center p-3 mb-8">
+                    <svg viewBox="0 0 100 100" fill="none" stroke="#C5A059" strokeWidth="2">
+                        <circle cx="50" cy="50" r="45" />
+                        <path d="M50 20 C60 40 40 60 50 80" />
+                    </svg>
+                </div>
+                <h4 class="font-serif text-2xl font-bold mb-8 uppercase tracking-tighter">The Donna Jean</h4>
+                
+                <div class="space-y-6 text-sm mb-12">
+                    <p class="font-bold text-champagneGold uppercase tracking-widest text-[10px]">Contact Information</p>
+                    <p class="opacity-80">
+                        Located within Sola Salon Studios<br>
+                        1010 N Glebe Rd, Suite 100<br>
+                        Arlington, VA 22201
+                    </p>
+                    <p class="opacity-80 font-bold">
+                        P: (555) 123-4567<br>
+                        E: hello@thedonnajean.com<br>
+                        W: thedonnajean.com
+                    </p>
+                </div>
+
+                <!-- QR Placeholder -->
+                <div class="w-24 h-24 bg-white/10 rounded-2xl border border-white/5 flex items-center justify-center mb-12">
+                    <span class="text-[8px] uppercase tracking-widest opacity-40">Scan to Book</span>
+                </div>
+
+                <div class="text-left w-full space-y-4">
+                    <p class="text-champagneGold font-bold uppercase tracking-widest text-[9px] border-b border-white/10 pb-2">Credentials</p>
+                    <ul class="text-[10px] space-y-2 opacity-60 uppercase font-medium">
+                        <li>✦ Certified Cranial Prosthesis Specialist</li>
+                        <li>✦ Licensed Cosmetologist (VA)</li>
+                        <li>✦ NPI Registered Provider</li>
+                        <li>✦ Non-Network TRICARE Certified</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-auto pt-8 text-center">
+                <p class="text-[8px] opacity-30 tracking-[0.4em] uppercase">NPI: 1346106044</p>
+            </div>
+        </div>
+
+        <!-- PANEL 5: INNER FLAP (The Legacy) -->
+        <div class="brochure-panel bg-warmClay linen-texture">
+            <div class="absolute inset-0 bg-white/20"></div>
+            <div class="relative z-10">
+                <h3 class="font-serif text-3xl text-deepTeal font-bold mb-6 italic leading-tight">The Keeper of the Sanctuary</h3>
+                
+                <!-- Archival Placeholder -->
+                <div class="aspect-[4/5] bg-deepTeal/10 rounded-[3rem] mb-8 overflow-hidden grayscale border-4 border-white/40 shadow-inner flex items-center justify-center p-8 text-center italic text-deepTeal/40 font-serif">
+                    [Archival Portrait of Donna Jean]
+                </div>
+
+                <p class="text-deepTeal/80 text-sm leading-relaxed mb-6 font-serif italic">
+                    "This clinic was built in honor of Donna Jean—a woman whose quiet strength and matriarchal warmth made everyone around her feel safe and held."
+                </p>
+                <p class="text-deepTeal/70 text-[13px] leading-relaxed">
+                    When our founder lost his mother, he lost his standard for what "care" should feel like. The Donna Jean Clinic is his living tribute. We do not just replace hair; we restore the person beneath it. When your patients sit in our chair, they are not a number. They are held in a warm embrace.
+                </p>
+            </div>
+        </div>
+
+        <!-- PANEL 1: FRONT COVER (The Hook) -->
+        <div class="brochure-panel bg-deepTeal text-white linen-texture">
+            <!-- Front Visual Background Panel -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="w-full h-full bg-gradient-to-br from-donnaRust to-deepTeal"></div>
+            </div>
+            
+            <div class="relative z-10 flex flex-col h-full">
+                <div class="mb-12">
+                    <span class="text-[9px] font-sans font-bold tracking-[0.5em] text-white/40 uppercase block mb-4">A VAS Clinical Original</span>
+                    <h1 class="font-serif text-4xl font-bold leading-none text-white tracking-tight">THE DONNA JEAN</h1>
+                    <h2 class="font-serif text-xl italic text-donnaRust mt-1">Hair Restoration Clinic</h2>
+                </div>
+
+                <div class="my-auto">
+                    <h2 class="font-serif text-5xl md:text-6xl font-bold leading-[1.1] mb-8 text-white italic">
+                        The Restoration <br><span class="text-donnaRust not-italic">of Dignity</span> & Identity.
+                    </h2>
+                    <p class="font-sans text-sm tracking-widest font-medium text-white/70 uppercase leading-relaxed max-w-[200px] border-l-2 border-donnaRust pl-6">
+                        Medical-Grade Cranial Prosthetics & Trauma-Informed Aesthetics.
+                    </p>
+                </div>
+
+                <div class="mt-auto">
+                    <div class="w-16 h-[1px] bg-donnaRust mb-6"></div>
+                    <p class="text-xs font-bold tracking-[0.3em] uppercase text-donnaRust mb-2">The Sanctuary</p>
+                    <p class="text-[11px] font-sans text-white/50 leading-relaxed uppercase tracking-wider">
+                        A Private Sanctuary for Black, Brown, and LGBTQIA+ Patients navigating Oncology and Alopecia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPREAD 2: THE INSIDE (Inside Left | Inside Center | Inside Right) -->
+    <div class="w-[1056px] h-[816px] bg-white flex shadow-2xl overflow-hidden brochure-spread relative rounded-sm">
+        
+        <!-- PANEL 2: INSIDE LEFT (The Medical Gap) -->
+        <div class="brochure-panel border-r border-deepTeal/5">
+            <h3 class="font-serif text-3xl text-deepTeal font-bold mb-8 italic">The Intersection of Medical Necessity & Artistry</h3>
+            
+            <div class="space-y-6 text-deepTeal/80 text-[13px] leading-relaxed">
+                <p>When a patient faces hair loss due to chemotherapy, radiation, or forms of alopecia (such as CCCA), the emotional toll is profound.</p>
+                
+                <p>Yet, the traditional medical model often leaves patients with two inadequate options: a <strong>sterile medical supply store</strong> lacking aesthetic expertise, or a <strong>public salon</strong> lacking privacy and trauma-informed care.</p>
+                
+                <p class="bg-donnaRust/5 p-6 rounded-[2rem] border border-donnaRust/10">
+                    Furthermore, patients with <span class="text-donnaRust font-bold italic">Afro-textured (3C-4C)</span> hair are routinely underserved, forced to accept Eurocentric prosthetic textures that do not reflect their biological identity.
+                </p>
+
+                <div class="pt-4">
+                    <p class="text-donnaRust font-sans font-bold uppercase tracking-widest text-[10px] mb-4">The Donna Jean Solution</p>
+                    <p>We bridge this gap. As a <span class="font-bold">Certified Cranial Prosthesis Specialist</span> and Licensed Cosmetologist, Victor Scotti, Jr. engineers custom, texture-matched prosthetics designed specifically for the unique biological needs of patients of color.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANEL 3: INSIDE CENTER (The Services) -->
+        <div class="brochure-panel border-r border-deepTeal/5 bg-softCream/30">
+            <h3 class="font-serif text-3xl text-deepTeal font-bold mb-6 italic">The Sanctuary Model</h3>
+            
+            <div class="aspect-video bg-deepTeal/5 rounded-[2.5rem] mb-6 overflow-hidden flex items-center justify-center p-6 text-center text-deepTeal/30 font-serif italic border border-deepTeal/10">
+                [Serene Visual: Private Sola Suite]
+            </div>
+
+            <p class="text-deepTeal/80 text-[13px] leading-relaxed mb-8">
+                Healing requires a safe environment. We operate on a strict, One-Patient-One-Provider basis within a private clinical suite. We offer a <strong>mirror-optional environment</strong>, ensuring patients can navigate vulnerability without the "fishbowl" exposure of an open floor plan.
+            </p>
+
+            <div class="space-y-6">
+                <p class="text-donnaRust font-sans font-bold uppercase tracking-widest text-[10px]">Core Clinical Services</p>
+                
+                <div class="space-y-4">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-2 h-2 rounded-full bg-donnaRust mt-1.5 flex-shrink-0"></div>
+                        <div>
+                            <p class="text-[12px] font-bold text-deepTeal">Custom Cranial Prosthetics</p>
+                            <p class="text-[11px] text-deepTeal/60 italic">Glueless, tension-free medical units engineered to protect compromised follicles.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-2 h-2 rounded-full bg-donnaRust mt-1.5 flex-shrink-0"></div>
+                        <div>
+                            <p class="text-[12px] font-bold text-deepTeal">Biomimetic Texture Matching</p>
+                            <p class="text-[11px] text-deepTeal/60 italic">Expert replication of 4C and Afro-textured biological hair.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-2 h-2 rounded-full bg-donnaRust mt-1.5 flex-shrink-0"></div>
+                        <div>
+                            <p class="text-[12px] font-bold text-deepTeal">Precision Color Artistry</p>
+                            <p class="text-[11px] text-deepTeal/60 italic">Advanced techniques to replicate natural dimensional growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANEL 4: INSIDE RIGHT (The Referral Process) -->
+        <div class="brochure-panel">
+            <h3 class="font-serif text-3xl text-deepTeal font-bold mb-8 italic">For Our Referring Providers</h3>
+            
+            <p class="text-deepTeal/80 text-[13px] leading-relaxed mb-8">
+                We are committed to providing your patients with the highest standard of empathetic, clinical care. We understand the specific contraindications of oncology treatments and scarring alopecias.
+            </p>
+
+            <div class="bg-deepTeal p-8 rounded-[3rem] text-white space-y-6 linen-texture">
+                <p class="text-champagneGold font-sans font-bold uppercase tracking-widest text-[10px]">How to Refer a Patient</p>
+                
+                <div class="space-y-5">
+                    <div>
+                        <p class="text-xs font-bold mb-1 uppercase tracking-wider">01. Prescribe</p>
+                        <p class="text-[11px] opacity-70 leading-relaxed">Provide a prescription for a "Cranial Prosthesis" (<span class="text-champagneGold font-bold">HCPCS Code: A9282</span>) noting the specific ICD-10 diagnosis.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold mb-1 uppercase tracking-wider">02. Consultation</p>
+                        <p class="text-[11px] opacity-70 leading-relaxed">Direct the patient for a private, 60-minute Clinical Consultation & Scalp Assessment.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold mb-1 uppercase tracking-wider">03. Insurance</p>
+                        <p class="text-[11px] opacity-70 leading-relaxed">We provide comprehensive <span class="text-champagneGold font-bold">Superbills</span> for commercial reimbursement or TRICARE Gap Exceptions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-auto">
+                <p class="text-[11px] text-deepTeal/60 italic leading-relaxed text-center">
+                    "Trusted referral partner for dermatologists and oncologists across the DMV area."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="no-print max-w-xl text-center space-y-4 mb-20">
+        <p class="text-xs text-deepTeal/40 leading-relaxed uppercase tracking-[0.2em]">
+            Production Note: Specify a "Soft-Touch" aqueous coating on a 100lb silk matte cover stock for a clinical, high-end sensory experience.
+        </p>
+    </div>
+
+</body>
+</html>
